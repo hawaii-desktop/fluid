@@ -55,5 +55,10 @@ add_subdirectory(effects)
 add_subdirectory(tests)
 add_subdirectory(ui)
 
+if(EXISTS icons)
+    install(DIRECTORY icons
+            DESTINATION ${QML_INSTALL_DIR}/Fluid/UI)
+endif()
+
 # Display feature summary
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
